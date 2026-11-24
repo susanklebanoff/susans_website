@@ -36,8 +36,10 @@ nav li a:hover { color: var(--rose); border-color: var(--rose); }
 }
 
 /* Hero */
-.hero img, .band { width: 100%; height: 60vh; min-height: 260px; object-fit: cover; }
-.hero img { object-position: center 88%; } /* crop low so both paths show */
+.hero img, .band { width: 100%; min-height: 260px; object-fit: cover; }
+/* Height follows width so the blossoms and the arch both fit; the crop is centred on them,
+   trimming sky at the top and road at the bottom. */
+.hero img { height: clamp(45vh, 44.5vw, 78vh); object-position: center 38%; }
 .band { height: 45vh; }
 .hero div { text-align: center; padding: 2.5rem 1.5rem 1rem; }
 h1 { font: 500 clamp(2.4rem, 6vw, 3.6rem)/1.1 var(--display); margin: 0; }
